@@ -61,12 +61,12 @@ const USED_IPHONES: Product[] = [
 ];
 
 const SEALED_IPHONES: Product[] = [
-  { name: "iPhone 16 Pro Max", storage: "512GB", price: "8.900,00", type: "Lacrado" },
-  { name: "iPhone 16 Pro Max", storage: "256GB", price: "7.900,00", type: "Lacrado" },
-  { name: "iPhone 16 Pro Max", storage: "256GB", price: "7.900,00", type: "Lacrado" },
-  { name: "iPhone 16 Pro Max", storage: "256GB", price: "7.900,00", type: "Lacrado" },
-  { name: "iPhone 16 Pro", storage: "256GB", price: "6.850,00", type: "Lacrado" },
-  { name: "iPhone 16 Plus", storage: "128GB", price: "5.400,00", type: "Lacrado" },
+  { name: "iPhone 17 Pro Max", storage: "512GB", price: "9.500,00", type: "Lacrado" },
+  { name: "iPhone 17 Pro Max", storage: "256GB", price: "8.600,00", type: "Lacrado" },
+  { name: "iPhone 17 Pro", storage: "256GB", price: "7.650,00", type: "Lacrado" },
+  { name: "iPhone 17 E", storage: "256GB", price: "4.200,00", type: "Lacrado" },
+  { name: "iPhone 17", storage: "256GB", price: "5.500,00", type: "Lacrado" },
+  { name: "iPhone 16 Plus", storage: "256GB", price: "5.600,00", type: "Lacrado" },
   { name: "iPhone 16", storage: "128GB", price: "4.650,00", type: "Lacrado" },
 ];
 
@@ -460,6 +460,9 @@ function ProductDetailsModal({ product, onClose }: { product: Product; onClose: 
 
   // Mapping specs based on product name
   const getSpecs = (name: string) => {
+    if (name.includes("17 Pro Max")) return { screen: "6.9\" ProMotion OLED", chip: "A19 Pro", cameras: "48MP + 48MP + 48MP", finish: "Polished Titanium" };
+    if (name.includes("17 Pro")) return { screen: "6.3\" ProMotion OLED", chip: "A19 Pro", cameras: "48MP + 48MP + 48MP", finish: "Polished Titanium" };
+    if (name.includes("17")) return { screen: "6.1\" Super Retina", chip: "A19", cameras: "48MP + 12MP", finish: "Aero Aluminum" };
     if (name.includes("16 Pro Max")) return { screen: "6.9\" LTPO OLED", chip: "A18 Pro", cameras: "48MP + 48MP + 12MP", finish: "Titanium" };
     if (name.includes("16 Pro")) return { screen: "6.3\" LTPO OLED", chip: "A18 Pro", cameras: "48MP + 48MP + 12MP", finish: "Titanium" };
     if (name.includes("16 Plus")) return { screen: "6.7\" Super Retina", chip: "A18", cameras: "48MP + 12MP", finish: "Aero Aluminum" };
