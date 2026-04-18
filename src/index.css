@@ -30,6 +30,16 @@
   @apply bg-glass backdrop-blur-xl border border-glass-border;
 }
 
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
 .text-gradient-accent {
   @apply bg-clip-text text-transparent bg-linear-to-r from-accent to-orange-400;
   text-shadow: 0 0 20px rgba(255, 78, 0, 0.3);

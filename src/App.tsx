@@ -100,15 +100,15 @@ export default function App() {
           isScrolled ? "glass-morphism py-4" : "bg-transparent py-6"
         }`}
       >
-        <div className="container mx-auto px-6 flex items-center justify-between">
+        <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
           <div 
             className="flex items-center gap-2 cursor-pointer" 
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-              <Smartphone className="text-zinc-950 w-6 h-6" />
+            <div className="w-9 h-9 md:w-10 md:h-10 bg-white rounded-full flex items-center justify-center">
+              <Smartphone className="text-zinc-950 w-5 h-5 md:w-6 md:h-6" />
             </div>
-            <span className="text-xl font-display font-bold tracking-tighter uppercase italic">
+            <span className="text-lg md:text-xl font-display font-bold tracking-tighter uppercase italic">
               Giardini <span className="text-zinc-400">Mobile</span>
             </span>
           </div>
@@ -160,24 +160,24 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-        <div className="container mx-auto px-6 relative z-10 text-center">
+      <section className="relative pt-24 pb-16 md:pt-48 md:pb-32 overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-bold uppercase tracking-widest text-zinc-400 mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-[10px] md:text-xs font-bold uppercase tracking-widest text-zinc-400 mb-6">
               <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
               Oportunidade única
             </div>
             
-            <h1 className="text-5xl md:text-8xl font-display font-extrabold tracking-tighter mb-6 leading-[0.9]">
-              IPHONES COM <br />
+            <h1 className="text-4xl md:text-8xl font-display font-extrabold tracking-tighter mb-6 leading-[0.95] md:leading-[0.9]">
+              IPHONES COM <br className="hidden md:block" />
               <span className="text-gradient-accent uppercase">OPORTUNIDADE</span>
             </h1>
             
-            <p className="text-lg md:text-2xl text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+            <p className="text-base md:text-2xl text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed font-light px-4 md:px-0">
               Modelos seminovos e lacrados, com <span className="text-white font-medium">garantia total</span> e entrega segura. O seu próximo iPhone está aqui.
             </p>
 
@@ -227,16 +227,18 @@ export default function App() {
       </div>
 
       {/* Products Sections */}
-      <main className="container mx-auto px-6 py-20 space-y-32">
+      <main className="container mx-auto px-4 md:px-6 py-12 md:py-20 space-y-20 md:space-y-32">
         
         {/* Used section */}
         <section id="seminovos" className="scroll-mt-32">
-          <div className="mb-12">
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 italic">IPHONES SEMINOVOS</h2>
-            <div className="flex flex-col md:flex-row md:items-center gap-4 text-zinc-400">
-              <p className="text-lg">Bateria entre 85% e 95%, aparelhos revisados e com 30 dias de garantia.</p>
+          <div className="mb-10 md:mb-12">
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-4 italic">IPHONES SEMINOVOS</h2>
+            <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-4 text-zinc-400">
+              <p className="text-base md:text-lg">Bateria entre 85% e 95%, aparelhos revisados e com 30 dias de garantia.</p>
               <div className="hidden md:block h-6 w-px bg-zinc-800"></div>
-              <span className="px-3 py-1 bg-zinc-900 border border-zinc-800 rounded text-xs font-bold text-zinc-200">GRADE A+ PERFORMANCE</span>
+              <div className="inline-flex">
+                <span className="px-3 py-1 bg-zinc-900 border border-zinc-800 rounded text-[10px] md:text-xs font-bold text-zinc-200">GRADE A+ PERFORMANCE</span>
+              </div>
             </div>
           </div>
 
@@ -253,12 +255,14 @@ export default function App() {
 
         {/* Sealed section */}
         <section id="lacrados" className="scroll-mt-32">
-          <div className="mb-12">
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 italic">IPHONES LACRADOS</h2>
-            <div className="flex flex-col md:flex-row md:items-center gap-4 text-zinc-400">
-              <p className="text-lg">Aparelhos novos, lacrados e com 1 ano de garantia Apple.</p>
+          <div className="mb-10 md:mb-12">
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-4 italic">IPHONES LACRADOS</h2>
+            <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-4 text-zinc-400">
+              <p className="text-base md:text-lg">Aparelhos novos, lacrados e com 1 ano de garantia Apple.</p>
               <div className="hidden md:block h-6 w-px bg-zinc-800"></div>
-              <span className="px-3 py-1 bg-white/10 border border-white/20 rounded text-xs font-bold text-white">100% ORIGINAL APPLE</span>
+              <div className="inline-flex">
+                <span className="px-3 py-1 bg-white/10 border border-white/20 rounded text-[10px] md:text-xs font-bold text-white">100% ORIGINAL APPLE</span>
+              </div>
             </div>
           </div>
 
@@ -490,79 +494,79 @@ function ProductDetailsModal({ product, onClose }: { product: Product; onClose: 
         initial={{ opacity: 0, scale: 0.9, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.9, y: 20 }}
-        className="relative w-full max-w-2xl glass-morphism rounded-[2.5rem] overflow-hidden border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.5)]"
+        className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto glass-morphism rounded-[1.5rem] md:rounded-[2.5rem] overflow-x-hidden border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.5)] scrollbar-hide"
       >
         <button 
           onClick={onClose}
-          className="absolute top-6 right-6 w-10 h-10 bg-white/5 hover:bg-white/10 rounded-full flex items-center justify-center text-white z-10"
+          className="absolute top-4 right-4 md:top-6 md:right-6 w-9 h-9 md:w-10 md:h-10 bg-white/5 hover:bg-white/10 rounded-full flex items-center justify-center text-white z-20"
         >
-          <X size={20} />
+          <X size={18} md:size={20} />
         </button>
 
-        <div className="p-8 md:p-12">
-          <div className="mb-10">
-            <span className="px-3 py-1 bg-accent/20 text-accent rounded-full text-[10px] font-black uppercase tracking-widest mb-4 inline-block">
+        <div className="p-6 md:p-12">
+          <div className="mb-8 md:mb-10">
+            <span className="px-3 py-1 bg-accent/20 text-accent rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-widest mb-3 md:mb-4 inline-block">
               {product.type} • Especificações Oficiais
             </span>
-            <h2 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter text-white leading-none">
+            <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter text-white leading-none">
               {product.name}
             </h2>
-            <p className="text-2xl text-zinc-500 font-display font-bold mt-2">{product.storage}</p>
+            <p className="text-xl md:text-2xl text-zinc-500 font-display font-bold mt-1 md:mt-2">{product.storage}</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-y-10 gap-x-6 mb-12">
+          <div className="grid grid-cols-2 gap-y-6 md:gap-y-10 gap-x-4 md:gap-x-6 mb-8 md:mb-12">
             <div>
-              <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-2">Processador</div>
-              <div className="text-white font-medium flex items-center gap-2">
-                <CheckCircle2 size={16} className="text-accent" />
+              <div className="text-[9px] md:text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1 md:mb-2">Processador</div>
+              <div className="text-white text-sm md:text-base font-medium flex items-center gap-2">
+                <CheckCircle2 size={14} md:size={16} className="text-accent shrink-0" />
                 {specs.chip}
               </div>
             </div>
             <div>
-              <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-2">Tela</div>
-              <div className="text-white font-medium flex items-center gap-2">
-                <CheckCircle2 size={16} className="text-accent" />
+              <div className="text-[9px] md:text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1 md:mb-2">Tela</div>
+              <div className="text-white text-sm md:text-base font-medium flex items-center gap-2">
+                <CheckCircle2 size={14} md:size={16} className="text-accent shrink-0" />
                 {specs.screen}
               </div>
             </div>
             <div>
-              <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-2">Câmeras</div>
-              <div className="text-white font-medium flex items-center gap-2">
-                <CheckCircle2 size={16} className="text-accent" />
+              <div className="text-[9px] md:text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1 md:mb-2">Câmeras</div>
+              <div className="text-white text-sm md:text-base font-medium flex items-center gap-2">
+                <CheckCircle2 size={14} md:size={16} className="text-accent shrink-0" />
                 {specs.cameras}
               </div>
             </div>
             <div>
-              <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-2">Acabamento</div>
-              <div className="text-white font-medium flex items-center gap-2">
-                <CheckCircle2 size={16} className="text-accent" />
+              <div className="text-[9px] md:text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1 md:mb-2">Acabamento</div>
+              <div className="text-white text-sm md:text-base font-medium flex items-center gap-2">
+                <CheckCircle2 size={14} md:size={16} className="text-accent shrink-0" />
                 {specs.finish}
               </div>
             </div>
             <div>
-              <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-2">Condição</div>
-              <div className="text-white font-medium flex items-center gap-2">
-                <div className={`w-2 h-2 rounded-full ${product.type === "Seminovo" ? "bg-green-500 animate-pulse" : "bg-accent"}`}></div>
-                {product.type === "Seminovo" ? "Saúde 85-95%" : "Lacrado / Garantia Apple"}
+              <div className="text-[9px] md:text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1 md:mb-2">Condição</div>
+              <div className="text-white text-sm md:text-base font-medium flex items-center gap-2">
+                <div className={`w-2 h-2 rounded-full shrink-0 ${product.type === "Seminovo" ? "bg-green-500 animate-pulse" : "bg-accent"}`}></div>
+                {product.type === "Seminovo" ? "Saúde 85-95%" : "Lacrado"}
               </div>
             </div>
             <div className="text-right">
-              <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-2">Investimento</div>
-              <div className="flex items-baseline justify-end gap-1">
-                <span className="text-accent text-sm font-bold">R$</span>
-                <span className="text-4xl font-display font-black text-white tracking-tighter">{product.price}</span>
+              <div className="text-[9px] md:text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1 md:mb-2">Investimento</div>
+              <div className="flex items-baseline justify-end gap-0.5 md:gap-1">
+                <span className="text-accent text-xs md:text-sm font-bold">R$</span>
+                <span className="text-2xl md:text-4xl font-display font-black text-white tracking-tighter">{product.price}</span>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3 md:gap-4">
             <button 
               onClick={handleWhatsAppAction}
-              className="w-full py-5 bg-[#25D366] text-white text-center font-black text-sm uppercase tracking-[0.2em] rounded-2xl hover:brightness-110 transition-all flex items-center justify-center gap-3 shadow-[0_20px_40px_rgba(37,211,102,0.2)] cursor-pointer"
+              className="w-full py-4 md:py-5 bg-[#25D366] text-white text-center font-black text-sm uppercase tracking-[0.15em] md:tracking-[0.2em] rounded-2xl hover:brightness-110 transition-all flex items-center justify-center gap-2 md:gap-3 shadow-[0_20px_40px_rgba(37,211,102,0.2)] cursor-pointer"
             >
-              <MessageCircle size={24} /> Conversar no WhatsApp
+              <MessageCircle size={20} md:size={24} /> Conversar no WhatsApp
             </button>
-            <p className="text-xs text-zinc-500 text-center px-10">
+            <p className="text-[10px] md:text-xs text-zinc-500 text-center px-4 md:px-10">
               Ao clicar, abriremos o WhatsApp do Felipe para você tirar suas dúvidas.
             </p>
           </div>
@@ -584,22 +588,22 @@ function ProductCard({ product, onOpenDetails }: { product: Product; key?: React
       initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-      className="glass-morphism rounded-2xl p-8 flex flex-col gap-6 hover:border-accent/40 transition-all group relative overflow-hidden"
+      className="glass-morphism rounded-2xl p-6 md:p-8 flex flex-col gap-5 md:gap-6 hover:border-accent/40 transition-all group relative overflow-hidden"
     >
       <div className="flex justify-between items-start">
         <div>
-          <span className={`px-3 py-1 rounded text-[10px] font-black uppercase tracking-widest mb-3 inline-block ${
+          <span className={`px-3 py-1 rounded text-[9px] md:text-[10px] font-black uppercase tracking-widest mb-2 md:mb-3 inline-block ${
             product.type === "Seminovo" ? "bg-zinc-800 text-zinc-400" : "bg-accent/20 text-accent"
           }`}>
             {product.type}
           </span>
-          <h3 className="text-2xl font-display font-black uppercase tracking-tighter text-white group-hover:text-accent transition-colors">
+          <h3 className="text-xl md:text-2xl font-display font-black uppercase tracking-tighter text-white group-hover:text-accent transition-colors">
             {product.name}
           </h3>
         </div>
         <div className="text-right">
-          <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1">Capacidade</div>
-          <div className="text-xl font-display font-bold text-white tracking-tight">{product.storage}</div>
+          <div className="text-[9px] md:text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1">Capacidade</div>
+          <div className="text-lg md:text-xl font-display font-bold text-white tracking-tight">{product.storage}</div>
         </div>
       </div>
 
@@ -607,42 +611,42 @@ function ProductCard({ product, onOpenDetails }: { product: Product; key?: React
 
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1">
+          <div className="text-[9px] md:text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1">
             {product.type}
           </div>
-          <div className="flex items-center gap-2 text-white font-medium text-sm">
+          <div className="flex items-center gap-2 text-white font-medium text-[13px] md:text-sm">
             {product.type === "Seminovo" ? (
               <>
-                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                Média Bateria 85% a 95%
+                <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
+                Bateria 85-95%
               </>
             ) : (
               <>
-                <BadgeCheck size={16} className="text-accent" />
+                <BadgeCheck size={14} md:size={16} className="text-accent" />
                 Lacrado Apple
               </>
             )}
           </div>
         </div>
         <div className="text-right">
-          <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1">Investimento</div>
-          <div className="flex items-baseline justify-end gap-1">
-            <span className="text-accent text-xs font-bold">R$</span>
-            <span className="text-3xl font-display font-black text-white tracking-tighter">{product.price}</span>
+          <div className="text-[9px] md:text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1">Investimento</div>
+          <div className="flex items-baseline justify-end gap-0.5 md:gap-1">
+            <span className="text-accent text-[11px] md:text-xs font-bold">R$</span>
+            <span className="text-2xl md:text-3xl font-display font-black text-white tracking-tighter">{product.price}</span>
           </div>
         </div>
       </div>
 
-      <div className="mt-4 flex flex-col gap-3">
+      <div className="mt-2 md:mt-4 flex flex-col gap-3">
         <button 
           onClick={onOpenDetails}
-          className="w-full py-4 bg-white text-black text-center font-black text-[10px] uppercase tracking-[0.15em] rounded-xl hover:bg-zinc-200 transition-all flex items-center justify-center gap-2"
+          className="w-full py-3.5 md:py-4 bg-white text-black text-center font-black text-[9px] md:text-[10px] uppercase tracking-[0.1em] md:tracking-[0.15em] rounded-xl hover:bg-zinc-200 transition-all flex items-center justify-center gap-2"
         >
-          Quero mais detalhes do aparelho <ArrowRight size={16} />
+          MAIS DETALHES <ArrowRight size={14} md:size={16} />
         </button>
-        <p className="text-[10px] text-accent/60 font-bold uppercase tracking-widest text-center">
-          <MessageCircle size={12} className="inline mr-1 mb-0.5" />
-          Você será direcionado para o WhatsApp do Felipe
+        <p className="text-[9px] text-accent/60 font-bold uppercase tracking-widest text-center">
+          <MessageCircle size={10} className="inline mr-1 mb-0.5" />
+          FALAR COM FELIPE NO WHATSAPP
         </p>
       </div>
 
